@@ -11,37 +11,40 @@ const Index = () => {
   const plans = [
     {
       name: "Стартовый",
-      price: "15%",
+      price: "20%",
       description: "от привлеченного оборота",
       features: [
-        "Базовая техническая поддержка",
+        "Поддержка в общем чате 24/7",
+        "Базовое обучение и гайды",
         "Маркетинговые материалы",
         "Личный кабинет партнера",
         "Еженедельные выплаты",
-        "Обучающие материалы"
+        "Реферальная система"
       ],
       highlight: false
     },
     {
       name: "Профессиональный",
-      price: "25%",
+      price: "30%",
       description: "от привлеченного оборота",
       features: [
-        "Приоритетная поддержка 24/7",
-        "Персональный менеджер",
+        "Персональный чат с менеджером",
+        "Индивидуальное обучение",
         "Готовые воронки продаж",
         "Индивидуальные промо-коды",
         "Доступ к закрытым вебинарам",
-        "Маркетинговый бюджет до 100K"
+        "Маркетинговый бюджет до 100K",
+        "Приоритетная техподдержка"
       ],
       highlight: true
     },
     {
       name: "Корпоративный",
-      price: "35%",
+      price: "до 40%",
       description: "от привлеченного оборота",
       features: [
-        "Выделенная команда поддержки",
+        "Выделенный чат с командой",
+        "Персональные тренинги",
         "Белый лейбл решения",
         "Кастомная интеграция API",
         "Совместный маркетинг",
@@ -56,36 +59,48 @@ const Index = () => {
   const benefits = [
     {
       icon: "TrendingUp",
-      title: "Высокая конверсия",
-      description: "Наши лиды конвертируются в продажи в 3 раза лучше рынка"
+      title: "Масштабируемый доход",
+      description: "Вы сами контролируете заработок — привлекайте больше клиентов и получайте больше"
     },
     {
-      icon: "Shield",
-      title: "Гарантия качества",
-      description: "Валидация каждого лида через 3 канала верификации"
+      icon: "MessageCircle",
+      title: "Поддержка в чатах",
+      description: "Общие и персональные чаты с командой — помощь на каждом этапе работы"
     },
     {
-      icon: "Zap",
-      title: "Мгновенная доставка",
-      description: "Лиды поступают клиентам в режиме реального времени"
+      icon: "GraduationCap",
+      title: "Обучение включено",
+      description: "Полное обучение продажам, гайды, вебинары и база знаний в подарок"
     },
     {
-      icon: "Users",
-      title: "5000+ партнеров",
-      description: "Крупнейшая партнерская сеть в России"
+      icon: "Percent",
+      title: "Комиссия до 40%",
+      description: "Самые высокие ставки на рынке — зарабатывайте до 40% от оборота"
     }
   ];
 
   const support = [
     {
-      icon: "Code",
-      title: "Техническая поддержка",
+      icon: "MessageCircle",
+      title: "Чаты и коммуникация",
       items: [
-        "API документация и SDK",
-        "Интеграция за 2 часа",
-        "Webhook уведомления",
-        "Тестовая среда разработки",
-        "Техподдержка 24/7"
+        "Общий чат для всех партнеров",
+        "Персональные чаты с менеджерами",
+        "Оперативные ответы 24/7",
+        "Обмен опытом с коллегами",
+        "Telegram и WhatsApp поддержка"
+      ]
+    },
+    {
+      icon: "GraduationCap",
+      title: "Обучение и развитие",
+      items: [
+        "Базовый курс для новичков",
+        "Продвинутые техники продаж",
+        "Еженедельные вебинары",
+        "База знаний и гайды",
+        "Персональные консультации",
+        "Разбор кейсов и ошибок"
       ]
     },
     {
@@ -96,7 +111,8 @@ const Index = () => {
         "Email-цепочки для продаж",
         "Баннеры и креативы",
         "Кейсы и презентации",
-        "Скрипты для отдела продаж"
+        "Скрипты для отдела продаж",
+        "Маркетинговые бюджеты"
       ]
     }
   ];
@@ -112,7 +128,7 @@ const Index = () => {
       
       <div className="relative">
         <header className="container mx-auto px-4 py-6">
-          <nav className="flex items-center justify-between">
+          <nav className="flex items-center justify-center">
             <div className="flex items-center gap-2">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
                 <Icon name="Rocket" size={24} className="text-white" />
@@ -121,9 +137,6 @@ const Index = () => {
                 Lead Store
               </span>
             </div>
-            <Button variant="outline" className="border-primary/50 hover:bg-primary/10">
-              Войти
-            </Button>
           </nav>
         </header>
 
@@ -134,9 +147,12 @@ const Index = () => {
           <h1 className="text-5xl md:text-7xl font-heading font-bold mb-6 bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent leading-tight">
             Зарабатывайте<br />с Lead Store
           </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Партнерская программа с прозрачными условиями, высокими комиссиями
-            и полной поддержкой на каждом этапе
+          <p className="text-xl text-muted-foreground mb-4 max-w-2xl mx-auto">
+            Партнерская программа с прозрачными условиями и комиссией до <span className="text-primary font-bold">40%</span>.
+            Вы сами масштабируете свой доход — чем больше клиентов, тем выше заработок.
+          </p>
+          <p className="text-lg text-muted-foreground/80 mb-8 max-w-2xl mx-auto">
+            Поддержка в чатах и полное обучение включены в программу
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <form onSubmit={handleSubmit} className="flex gap-2 w-full sm:w-auto">
@@ -153,10 +169,14 @@ const Index = () => {
               </Button>
             </form>
           </div>
-          <div className="flex items-center justify-center gap-8 mt-12 text-sm text-muted-foreground">
+          <div className="flex flex-wrap items-center justify-center gap-6 mt-12 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
               <Icon name="CheckCircle" size={20} className="text-primary" />
-              <span>Без скрытых комиссий</span>
+              <span>Комиссия до 40%</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Icon name="CheckCircle" size={20} className="text-primary" />
+              <span>Чаты и обучение включены</span>
             </div>
             <div className="flex items-center gap-2">
               <Icon name="CheckCircle" size={20} className="text-primary" />
@@ -249,7 +269,7 @@ const Index = () => {
               Мы предоставляем все инструменты для вашего успеха
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {support.map((item, index) => (
               <Card key={index} className="bg-card/50 backdrop-blur border-border hover:border-primary/50 transition-all duration-300">
                 <CardHeader>
